@@ -18,6 +18,7 @@ public abstract class Veiculo {
     private String placa;
     private double precoBase;
 
+    // Construtor da classe
     public Veiculo(String marca, String modelo, int ano, String placa, double precoBase) {
         this.marca = marca;
         this.modelo = modelo;

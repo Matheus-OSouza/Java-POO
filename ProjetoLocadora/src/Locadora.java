@@ -20,5 +20,23 @@ public class Locadora {
         }
     }
 
+    public List<Veiculo> getFrota() {
+        return frota;
+    }
 
+    public void aluguelVeiculos(int dias, int idVeiculo) {
+        Veiculo v = frota.get(idVeiculo - 1);
+
+        v.getPrecoBase();
+
+        double total = v.calcularDiaria() * dias;
+
+        System.out.println(" ==== Resumo do aluguel veiculo ====");
+        System.out.println("Veículo: " + v.exibirDados());
+        System.out.println("quantidade de dias: " + dias);
+        System.out.printf("Valor diário: %.2f ", v.calcularDiaria());
+        System.out.printf("\nTotal do período da regência: %.2f ", total);
+
+
+    }
 }
